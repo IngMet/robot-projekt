@@ -1,0 +1,13 @@
+
+task main(){
+
+     while(true)
+     {
+        OnFwd(OUT_BC, 60);
+        //OnFwd(OUT_BC, 80);
+        //OnFwd(OUT_BC, 100);
+     }
+
+
+
+} // Slut på main.

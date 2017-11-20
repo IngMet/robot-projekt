@@ -1,0 +1,28 @@
+/*
+Grundläggande kod.
+*/
+#define POWER 60
+#define VOLUME 5
+
+task main()
+{
+//SetSensorLowspeed(IN_4); // port 4
+
+     while(true)
+     {
+          OnFwd(OUT_AC, POWER);
+          Wait(100);
+
+          //if(SensorUS(IN_4) <= 15)
+          //{
+               // Reverse
+               OnRev(OUT_AC, POWER);
+               Wait(1000);
+
+               // Turn left
+               OnFwd(OUT_A, POWER);
+               OnRev(OUT_C, POWER);
+               Wait(1000);
+          //}
+     }
+}

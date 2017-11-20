@@ -1,0 +1,15 @@
+/*
+Grundläggande kod.
+*/
+#define POWER 60
+#define VOLUME 5
+
+task main()
+{
+//SetSensorLowspeed(IN_4); // port 4
+
+     while(true)
+     {
+          OnFwd(OUT_C, 75);
+     }
+}

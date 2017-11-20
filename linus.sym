@@ -1,0 +1,473 @@
+#SYMBOLS
+Index	Identifier	Type	Flag	Data	Size	RefCount
+0	__signed_stack_001main	6	1	0	4	26
+1	__D0main	6	1	4	4	44
+2	__SPTArgsMutex	9	0	8	4	18
+3	__Wait_7qG2_ms_7qG2_000_inline_main	5	1	12	4	6
+4	__signed_stack_003main	6	1	16	4	18
+5	__signed_stack_002main	6	1	20	4	22
+6	__main_7qG2_freq_7qG2_000	4	1	24	2	2
+7	__main_7qG2_nColor_7qG2_000	4	1	26	2	2
+8	__constVal32	2	0	28	1	10
+9	____initialize_global_data_return	1	1	29	1	3
+10	__constVal0	2	1	30	1	12
+11	__constVal1	2	0	31	1	2
+12	__constVal96	2	0	32	1	3
+13	__SetSensorTouch_7qG2_port_7qG2_000_inline_main	1	1	33	1	4
+14	__SetSensorColorFull_7qG2_port_7qG2_000_inline_main	1	1	34	1	4
+15	__constVal63	2	0	35	1	3
+16	__constVal13	2	0	36	1	1
+17	__PFTmp	1	1	37	1	1
+18	__constVal2	2	0	38	1	1
+19	__ResetSensorTmp	1	1	39	1	2
+20	____ResetSensorSubroutine_return	1	1	40	1	4
+21	__constVal3	2	0	41	1	3
+22	__zfmain	1	1	42	1	8
+23	__ResetSensorPort	1	1	43	1	4
+24	__SPTArgs	8	0	5	8	54
+25	__SPTArgs.Result	2	1	44	1	54
+26	__SPTArgs.Frequency	3	1	46	2	54
+27	__SPTArgs.Duration	3	1	48	2	54
+28	__SPTArgs.Loop	1	1	50	1	54
+29	__SPTArgs.Volume	1	1	51	1	54
+30	__TextOutArgs	8	0	4	16	11
+31	__TextOutArgs.Result	2	1	52	1	11
+32	__TextOutArgs.Location	8	0	2	4	11
+33	__TextOutArgs.Location.X	4	1	56	2	11
+34	__TextOutArgs.Location.Y	4	1	58	2	11
+35	__TextOutArgs.Text	7	0	60	4	11
+36	__TextOutArgs.Text.Text_type	1	0	0	1	0
+37	__TextOutArgs.Options	5	1	64	4	11
+38	__OUT_BC	7	0	68	4	3
+39	__OUT_BC.__OUT_BC_type	1	0	0	1	0
+40	__constStr0010	7	0	70	4	1
+41	__constStr0010.__constStr0010_type	1	1	0	1	0
+42	__strbufmain	7	0	72	4	4
+43	__strbufmain.__strbufmain_type	1	0	0	1	0
+44	__constStr0009	7	0	74	4	1
+45	__constStr0009.__constStr0009_type	1	1	0	1	0
+#SOURCES
+Clump	Line	PC	Source
+0	8	0	#line 8 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	9	0		subcall __initialize_global_data, ____initialize_global_data_return
+0	8	2	#line 8 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	8	2	#line 8 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	9	2		set __SetSensorColorFull_7qG2_port_7qG2_000_inline_main, 2
+0	8	5	#line 8 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	3802	5	#line 3802 "NXCDefs.h"
+0	3803	5	#pragma macro 6
+0	3803	5		setin __constVal13, __SetSensorColorFull_7qG2_port_7qG2_000_inline_main, 0
+0	3803	9		setin __constVal0, __SetSensorColorFull_7qG2_port_7qG2_000_inline_main, 1
+0	3803	13		mov __ResetSensorPort, __SetSensorColorFull_7qG2_port_7qG2_000_inline_main
+0	3803	15		subcall __ResetSensorSubroutine, ____ResetSensorSubroutine_return
+0	3617	17	#line 3617 "NXCDefs.h"
+0	3802	17	#line 3802 "NXCDefs.h"
+0	11	17	#line 11 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	14	17	#line 14 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	15	17		set __main_7qG2_freq_7qG2_000, 300
+0	14	20	#line 14 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	15	20	#line 15 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	16	20		set __D0main, 1
+0	17	23	#line 17 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	18	23		tst 5, __zfmain, __D0main
+0	17	26	#line 17 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	18	26		brtst 4, __NXC_Label_494, __zfmain
+0	17	29	#line 17 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	18	29		getin __main_7qG2_nColor_7qG2_000, __constVal2, 4
+0	17	33	#line 17 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	17	33	#line 17 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	17	33	#line 17 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	18	33	#line 18 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	19	33		set __SetSensorTouch_7qG2_port_7qG2_000_inline_main, 0
+0	18	36	#line 18 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	3718	36	#line 3718 "NXCDefs.h"
+0	3719	36	#pragma macro 6
+0	3719	36		setin __constVal1, __SetSensorTouch_7qG2_port_7qG2_000_inline_main, 0
+0	3719	40		setin __constVal32, __SetSensorTouch_7qG2_port_7qG2_000_inline_main, 1
+0	3719	44		mov __ResetSensorPort, __SetSensorTouch_7qG2_port_7qG2_000_inline_main
+0	3719	46		subcall __ResetSensorSubroutine, ____ResetSensorSubroutine_return
+0	3666	48	#line 3666 "NXCDefs.h"
+0	3718	48	#line 3718 "NXCDefs.h"
+0	20	48	#line 20 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	20	48	#line 20 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	21	48		mov __signed_stack_001main, __main_7qG2_nColor_7qG2_000
+0	20	50	#line 20 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	21	50	#line 21 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	22	50		set __D0main, 1
+0	21	53	#line 21 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	22	53		cmp 4, __zfmain, __signed_stack_001main, __D0main
+0	21	57	#line 21 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	22	57		mov __D0main, __zfmain
+0	22	59	#line 22 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	23	59		brtst 4, __NXC_Label_503, __zfmain
+0	22	62	#line 22 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	23	62		mov __signed_stack_001main, __main_7qG2_freq_7qG2_000
+0	22	64	#line 22 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	22	64	#line 22 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	23	64		set __signed_stack_002main, 100
+0	22	67	#line 22 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	22	67	#line 22 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	23	67		set __signed_stack_003main, 5
+0	22	70	#line 22 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	22	70	#line 22 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	23	70		set __D0main, 0
+0	23	73	#line 23 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	24	73		acquire __SPTArgsMutex
+0	23	74	#line 23 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	24	74		mov __SPTArgs.Frequency, __signed_stack_001main
+0	23	76	#line 23 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	24	76		mov __SPTArgs.Duration, __signed_stack_002main
+0	23	78	#line 23 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	24	78		mov __SPTArgs.Volume, __signed_stack_003main
+0	23	80	#line 23 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	24	80		mov __SPTArgs.Loop, __D0main
+0	23	82	#line 23 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	24	82		syscall 10, __SPTArgs
+0	23	85	#line 23 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	24	85		mov __D0main, __SPTArgs.Result
+0	23	87	#line 23 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	24	87		release __SPTArgsMutex
+0	23	88	#line 23 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	24	88	#line 24 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	25	88	#pragma macro 7
+0	25	88		setout __OUT_BC, 2, __constVal0, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+0	3723	111	#line 3723 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	24	111	#line 24 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	24	111	#line 24 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	25	111		set __signed_stack_001main, 0
+0	24	114	#line 24 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	24	114	#line 24 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	25	114		set __signed_stack_002main, 56
+0	24	117	#line 24 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	24	117	#line 24 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	25	117		strcat __strbufmain, __constStr0009
+0	24	121	#line 24 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	25	121		set __D0main, 1
+0	26	124	#line 26 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	26	124	#line 26 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	27	124		mov __TextOutArgs.Location.X, __signed_stack_001main
+0	26	126	#line 26 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	27	126		mov __TextOutArgs.Location.Y, __signed_stack_002main
+0	26	128	#line 26 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	27	128		mov __TextOutArgs.Options, __D0main
+0	26	130	#line 26 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	27	130		mov __TextOutArgs.Text, __strbufmain
+0	26	132	#line 26 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	27	132		syscall 13, __TextOutArgs
+0	26	135	#line 26 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	26	135	#line 26 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	26	135	#line 26 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	26	135	#line 26 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	27	135		set __signed_stack_001main, 400
+0	26	138	#line 26 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	26	138	#line 26 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	27	138		set __signed_stack_002main, 600
+0	26	141	#line 26 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	26	141	#line 26 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	27	141		set __signed_stack_003main, 5
+0	26	144	#line 26 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	26	144	#line 26 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	27	144		set __D0main, 0
+0	27	147	#line 27 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	28	147		acquire __SPTArgsMutex
+0	27	148	#line 27 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	28	148		mov __SPTArgs.Frequency, __signed_stack_001main
+0	27	150	#line 27 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	28	150		mov __SPTArgs.Duration, __signed_stack_002main
+0	27	152	#line 27 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	28	152		mov __SPTArgs.Volume, __signed_stack_003main
+0	27	154	#line 27 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	28	154		mov __SPTArgs.Loop, __D0main
+0	27	156	#line 27 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	28	156		syscall 10, __SPTArgs
+0	27	159	#line 27 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	28	159		mov __D0main, __SPTArgs.Result
+0	27	161	#line 27 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	28	161		release __SPTArgsMutex
+0	27	162	#line 27 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	27	162	#line 27 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	28	162		set __signed_stack_001main, 650
+0	27	165	#line 27 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	27	165	#line 27 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	28	165		set __signed_stack_002main, 300
+0	27	168	#line 27 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	27	168	#line 27 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	28	168		set __signed_stack_003main, 5
+0	27	171	#line 27 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	27	171	#line 27 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	28	171		set __D0main, 0
+0	28	174	#line 28 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	29	174		acquire __SPTArgsMutex
+0	28	175	#line 28 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	29	175		mov __SPTArgs.Frequency, __signed_stack_001main
+0	28	177	#line 28 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	29	177		mov __SPTArgs.Duration, __signed_stack_002main
+0	28	179	#line 28 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	29	179		mov __SPTArgs.Volume, __signed_stack_003main
+0	28	181	#line 28 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	29	181		mov __SPTArgs.Loop, __D0main
+0	28	183	#line 28 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	29	183		syscall 10, __SPTArgs
+0	28	186	#line 28 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	29	186		mov __D0main, __SPTArgs.Result
+0	28	188	#line 28 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	29	188		release __SPTArgsMutex
+0	28	189	#line 28 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	28	189	#line 28 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	29	189		set __signed_stack_001main, 740
+0	28	192	#line 28 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	28	192	#line 28 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	29	192		set __signed_stack_002main, 300
+0	28	195	#line 28 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	28	195	#line 28 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	29	195		set __signed_stack_003main, 5
+0	28	198	#line 28 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	28	198	#line 28 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	29	198		set __D0main, 0
+0	29	201	#line 29 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	30	201		acquire __SPTArgsMutex
+0	29	202	#line 29 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	30	202		mov __SPTArgs.Frequency, __signed_stack_001main
+0	29	204	#line 29 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	30	204		mov __SPTArgs.Duration, __signed_stack_002main
+0	29	206	#line 29 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	30	206		mov __SPTArgs.Volume, __signed_stack_003main
+0	29	208	#line 29 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	30	208		mov __SPTArgs.Loop, __D0main
+0	29	210	#line 29 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	30	210		syscall 10, __SPTArgs
+0	29	213	#line 29 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	30	213		mov __D0main, __SPTArgs.Result
+0	29	215	#line 29 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	30	215		release __SPTArgsMutex
+0	29	216	#line 29 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	29	216	#line 29 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	30	216		set __Wait_7qG2_ms_7qG2_000_inline_main, 800
+0	29	219	#line 29 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	7921	219	#line 7921 "NXCDefs.h"
+0	7922	219		wait2 NA, __Wait_7qG2_ms_7qG2_000_inline_main
+0	7921	222	#line 7921 "NXCDefs.h"
+0	30	222	#line 30 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	30	222	#line 30 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	31	222		set __signed_stack_001main, 870
+0	30	225	#line 30 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	30	225	#line 30 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	31	225		set __signed_stack_002main, 1000
+0	30	228	#line 30 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	30	228	#line 30 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	31	228		set __signed_stack_003main, 5
+0	30	231	#line 30 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	30	231	#line 30 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	31	231		set __D0main, 0
+0	31	234	#line 31 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	32	234		acquire __SPTArgsMutex
+0	31	235	#line 31 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	32	235		mov __SPTArgs.Frequency, __signed_stack_001main
+0	31	237	#line 31 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	32	237		mov __SPTArgs.Duration, __signed_stack_002main
+0	31	239	#line 31 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	32	239		mov __SPTArgs.Volume, __signed_stack_003main
+0	31	241	#line 31 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	32	241		mov __SPTArgs.Loop, __D0main
+0	31	243	#line 31 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	32	243		syscall 10, __SPTArgs
+0	31	246	#line 31 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	32	246		mov __D0main, __SPTArgs.Result
+0	31	248	#line 31 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	32	248		release __SPTArgsMutex
+0	31	249	#line 31 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	31	249	#line 31 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	32	249		set __signed_stack_001main, 980
+0	31	252	#line 31 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	31	252	#line 31 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	32	252		set __signed_stack_002main, 200
+0	31	255	#line 31 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	31	255	#line 31 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	32	255		set __signed_stack_003main, 5
+0	31	258	#line 31 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	31	258	#line 31 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	32	258		set __D0main, 0
+0	32	261	#line 32 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	33	261		acquire __SPTArgsMutex
+0	32	262	#line 32 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	33	262		mov __SPTArgs.Frequency, __signed_stack_001main
+0	32	264	#line 32 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	33	264		mov __SPTArgs.Duration, __signed_stack_002main
+0	32	266	#line 32 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	33	266		mov __SPTArgs.Volume, __signed_stack_003main
+0	32	268	#line 32 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	33	268		mov __SPTArgs.Loop, __D0main
+0	32	270	#line 32 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	33	270		syscall 10, __SPTArgs
+0	32	273	#line 32 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	33	273		mov __D0main, __SPTArgs.Result
+0	32	275	#line 32 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	33	275		release __SPTArgsMutex
+0	32	276	#line 32 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	32	276	#line 32 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	33	276		set __Wait_7qG2_ms_7qG2_000_inline_main, 200
+0	32	279	#line 32 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	7921	279	#line 7921 "NXCDefs.h"
+0	7922	279		wait2 NA, __Wait_7qG2_ms_7qG2_000_inline_main
+0	7921	282	#line 7921 "NXCDefs.h"
+0	33	282	#line 33 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	33	282	#line 33 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	34	282		set __signed_stack_001main, 980
+0	33	285	#line 33 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	33	285	#line 33 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	34	285		set __signed_stack_002main, 200
+0	33	288	#line 33 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	33	288	#line 33 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	34	288		set __signed_stack_003main, 5
+0	33	291	#line 33 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	33	291	#line 33 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	34	291		set __D0main, 0
+0	34	294	#line 34 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	35	294		acquire __SPTArgsMutex
+0	34	295	#line 34 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	35	295		mov __SPTArgs.Frequency, __signed_stack_001main
+0	34	297	#line 34 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	35	297		mov __SPTArgs.Duration, __signed_stack_002main
+0	34	299	#line 34 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	35	299		mov __SPTArgs.Volume, __signed_stack_003main
+0	34	301	#line 34 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	35	301		mov __SPTArgs.Loop, __D0main
+0	34	303	#line 34 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	35	303		syscall 10, __SPTArgs
+0	34	306	#line 34 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	35	306		mov __D0main, __SPTArgs.Result
+0	34	308	#line 34 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	35	308		release __SPTArgsMutex
+0	34	309	#line 34 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	34	309	#line 34 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	35	309		set __Wait_7qG2_ms_7qG2_000_inline_main, 200
+0	34	312	#line 34 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	7921	312	#line 7921 "NXCDefs.h"
+0	7922	312		wait2 NA, __Wait_7qG2_ms_7qG2_000_inline_main
+0	7921	315	#line 7921 "NXCDefs.h"
+0	35	315	#line 35 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	35	315	#line 35 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	36	315		set __signed_stack_001main, 300
+0	35	318	#line 35 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	35	318	#line 35 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	36	318		set __signed_stack_002main, 300
+0	35	321	#line 35 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	35	321	#line 35 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	36	321		set __signed_stack_003main, 5
+0	35	324	#line 35 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	35	324	#line 35 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	36	324		set __D0main, 0
+0	36	327	#line 36 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	37	327		acquire __SPTArgsMutex
+0	36	328	#line 36 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	37	328		mov __SPTArgs.Frequency, __signed_stack_001main
+0	36	330	#line 36 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	37	330		mov __SPTArgs.Duration, __signed_stack_002main
+0	36	332	#line 36 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	37	332		mov __SPTArgs.Volume, __signed_stack_003main
+0	36	334	#line 36 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	37	334		mov __SPTArgs.Loop, __D0main
+0	36	336	#line 36 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	37	336		syscall 10, __SPTArgs
+0	36	339	#line 36 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	37	339		mov __D0main, __SPTArgs.Result
+0	36	341	#line 36 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	37	341		release __SPTArgsMutex
+0	36	342	#line 36 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	36	342	#line 36 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	37	342		set __signed_stack_001main, 100
+0	36	345	#line 36 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	36	345	#line 36 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	37	345		set __signed_stack_002main, 1000
+0	36	348	#line 36 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	36	348	#line 36 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	37	348		set __signed_stack_003main, 5
+0	36	351	#line 36 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	36	351	#line 36 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	37	351		set __D0main, 0
+0	43	354	#line 43 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	44	354		acquire __SPTArgsMutex
+0	43	355	#line 43 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	44	355		mov __SPTArgs.Frequency, __signed_stack_001main
+0	43	357	#line 43 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	44	357		mov __SPTArgs.Duration, __signed_stack_002main
+0	43	359	#line 43 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	44	359		mov __SPTArgs.Volume, __signed_stack_003main
+0	43	361	#line 43 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	44	361		mov __SPTArgs.Loop, __D0main
+0	43	363	#line 43 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	44	363		syscall 10, __SPTArgs
+0	43	366	#line 43 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	44	366		mov __D0main, __SPTArgs.Result
+0	43	368	#line 43 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	44	368		release __SPTArgsMutex
+0	43	369	#line 43 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	46	369	#line 46 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	47	369		jmp __NXC_Label_588
+0	46	371	#line 46 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	47	371		set __D0main, 65
+0	47	374	#line 47 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	48	374	#pragma macro 7
+0	48	374		setout __OUT_BC, 2, __D0main, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+0	4114	397	#line 4114 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	47	397	#line 47 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	47	397	#line 47 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	48	397		set __signed_stack_001main, 0
+0	47	400	#line 47 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	47	400	#line 47 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	48	400		set __signed_stack_002main, 48
+0	47	403	#line 47 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	47	403	#line 47 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	48	403		strcat __strbufmain, __constStr0010
+0	47	407	#line 47 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	48	407		set __D0main, 1
+0	48	410	#line 48 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	48	410	#line 48 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	49	410		mov __TextOutArgs.Location.X, __signed_stack_001main
+0	48	412	#line 48 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	49	412		mov __TextOutArgs.Location.Y, __signed_stack_002main
+0	48	414	#line 48 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	49	414		mov __TextOutArgs.Options, __D0main
+0	48	416	#line 48 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	49	416		mov __TextOutArgs.Text, __strbufmain
+0	48	418	#line 48 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	49	418		syscall 13, __TextOutArgs
+0	48	421	#line 48 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	49	421		mov __D0main, __TextOutArgs.Result
+0	48	423	#line 48 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	48	423	#line 48 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	48	423	#line 48 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	49	423		getin __signed_stack_001main, __constVal0, 4
+0	48	427	#line 48 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	49	427	#line 49 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	50	427		set __D0main, 1
+0	49	430	#line 49 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	50	430		cmp 4, __zfmain, __signed_stack_001main, __D0main
+0	49	434	#line 49 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	50	434		mov __D0main, __zfmain
+0	50	436	#line 50 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	51	436		brtst 4, __NXC_Label_599, __zfmain
+0	50	439	#line 50 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	51	439		set __D0main, 100
+0	51	442	#line 51 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	52	442	#pragma macro 7
+0	52	442		setout __OUT_BC, 2, __D0main, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+0	4170	465	#line 4170 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	51	465	#line 51 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	55	465	#line 55 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	56	465	#line 56 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	58	465	#line 58 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	59	465		jmp __NXC_Label_493
+0	58	467	#line 58 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+0	59	467		exit -1, -1
+1	4885	0		setin __constVal1, __ResetSensorPort, 5
+1	4887	4		getin __ResetSensorTmp, __ResetSensorPort, 5
+1	4888	8		brtst 5, __SensorStillInvalid, __ResetSensorTmp
+1	4889	11		subret ____ResetSensorSubroutine_return
+2	59	0	#line 59 "C:\Users\Admin\Desktop\LEGO\linus.nxc"
+2	60	0		subret ____initialize_global_data_return
+#CLUMPS
+Clump	Name	Offset	File
+0	main	0	C:\Users\Admin\Desktop\LEGO\linus.nxc
+1	__ResetSensorSubroutine	470	NXTDefs.h
+2	__initialize_global_data	483	C:\Users\Admin\Desktop\LEGO\linus.nxc

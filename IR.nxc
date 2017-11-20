@@ -1,0 +1,35 @@
+#define VOLUME 7
+
+task main(){
+int distance, counter = 0;
+SetSensorLowspeed(IN_4);
+
+   while(true)
+   {
+           TextOut(0, LCD_LINE1, NumToStr(SensorUS(IN_4)));
+           while(SensorUS(IN_4) == 255)
+           {
+              OnFwd(OUT_BC, 90);
+              OnFwd(OUT_BC, 90);
+              if(counter <= 3)
+              {
+
+                 OnRev(OUT_C, 90);
+                 Wait(600);
+                 
+              }
+              else
+              {
+                 OnFwd(OUT_C, 70);
+                 OnRev(OUT_B, 70);
+                 
+                 OnFwd(OUT_C, 70);
+                 OnRev(OUT_B, 70);
+                 counter = 0;
+              }
+                 counter++;
+           }
+           TextOut(0, LCD_LINE2, "HEJSAN");
+           PlayToneEx(400, 600, VOLUME, FALSE);
+   }
+}

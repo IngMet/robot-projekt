@@ -1,0 +1,60 @@
+/*
+Slutgiltiga koden införs i denna fil.
+*/
+#define POWER 60
+#define VOLUME 5
+#define DISTANCE 10
+
+task main()
+{
+     SetSensorColorFull(S3); // port 3
+     //unsigned int r[], n[], s[], rawRed, rawGreen, rawBlue;
+
+     int colorValue, nColor;
+     int freq = 300;
+
+     while(true)
+     {
+           //ReadSensorColorEx(S3, colorValue, r, n, s);
+           nColor = Sensor(S3);
+           SetSensorTouch(IN_1);
+           SetSensorLowspeed(IN_4);
+
+                if(nColor == INPUT_BLACKCOLOR)
+                {
+                     PlayToneEx(freq, 100, VOLUME, FALSE);
+                     Off(OUT_BC);
+                     TextOut(0, LCD_LINE1, "STANNAR", DRAW_OPT_CLEAR_WHOLE_SCREEN);
+                     
+                     PlayToneEx(400, 600, VOLUME, FALSE);
+                     PlayToneEx(650, 300, VOLUME, FALSE);
+                     PlayToneEx(740, 300, VOLUME, FALSE);
+                     Wait(800);
+                     PlayToneEx(870, 1000, VOLUME, FALSE);
+                     PlayToneEx(980, 200, VOLUME, FALSE);
+                     Wait(200);
+                     PlayToneEx(980, 200, VOLUME, FALSE);
+                     Wait(200);
+                     PlayToneEx(300, 300, VOLUME, FALSE);
+                     PlayToneEx(100, 1000, VOLUME, FALSE);
+                     
+                     // Svänger höger vid svart tejp.
+                     //OnRev(OUT_B, POWER);
+                     //OnFwd(OUT_C, POWER);
+                     //Wait(1000);
+
+                }
+                else
+                {
+                        OnFwd(OUT_BC, 65);
+                        TextOut(0, LCD_LINE2, "KOR", DRAW_OPT_CLEAR_WHOLE_SCREEN);
+                        if(SensorUS(IN_4) > NEAR);
+                        if(SENSOR_1 == 1)
+                        {
+                           OnFwd(OUT_BC, 100);
+                        }
+                }
+
+
+     }
+}
