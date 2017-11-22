@@ -1,0 +1,47 @@
+
+task main()
+{
+     SetSensorLowspeed(S4);  //port 4
+     SetSensorColorFull(S3);
+
+     unsigned int distance;
+     long t0, time = 0;
+     t0 = CurrentTick();
+     while(true)
+     {
+       while(Sensor(S3)!=INPUT_BLACKCOLOR)
+       {
+           while((time= CurrentTick()-t0)<5000)
+           {
+             distance=SensorUS(S4);
+             TextOut(0,LCD_LINE1,NumToStr(distance));
+             TextOut(0,LCD_LINE1,NumToStr(time));
+             if((time= CurrentTick()-t0)<3000 && distance==255)
+             {
+               OnFwd(OUT_BC,100);
+             }
+              else if(distance==255)
+             {
+                Off(OUT_C);
+                OnFwd(OUT_B,100);
+             }
+             else
+             {
+               OnFwd(OUT_BC,90);
+             }
+            }
+            t0=CurrentTick();
+       }
+       t0 = CurrentTick();
+       while((time= CurrentTick()-t0)<1000)
+       {
+
+         OnFwd(OUT_B,100);
+         OnRev(OUT_C,100);
+         PlayTone(500,1);
+       }
+
+     }
+     
+}
+
