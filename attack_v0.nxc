@@ -1,0 +1,21 @@
+
+task main()
+{
+     SetSensorLowspeed(S4);  //port 4
+
+     unsigned int distance;
+
+
+     while(true)
+     {
+      distance=SensorUS(S4);
+      TextOut(0,LCD_LINE1,NumToStr(distance));
+      if(distance!=255)
+      {
+            OnFwd(OUT_BC,60);
+      }
+      else{
+            OnFwd(OUT_B,100);
+      }
+     }
+}
