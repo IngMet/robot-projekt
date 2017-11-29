@@ -1,0 +1,133 @@
+void turn(int direction, int strength)
+{
+
+}
+void Attack();
+int Sensors();
+void TapeDodge();
+int SensCheck();
+
+
+task main()
+{
+     SetSensorLowspeed(S4);  //port 4
+     SetSensorColorFull(S3);
+
+     unsigned int distance, seenSomething = 0;
+     long t0, time = 0, timeTemp = 0;
+     t0 = CurrentTick();
+     while(true)
+     {
+       do
+       {
+             distance=SensorUS(S4);
+             TextOut(0,LCD_LINE1,NumToStr(distance));
+             TextOut(0,LCD_LINE1,NumToStr(time));
+             if((CurrentTick()-t0)<3000 && SensCheck()==1)
+             {
+              Off(OUT_BC);
+              OnFwd(OUT_BC,100);
+             }
+             else if((CurrentTick()-t0)<4000 && SensCheck()==1)
+             {
+                Off(OUT_BC);
+                OnRev(OUT_B,100);
+                OnFwd(OUT_C,100);
+             }
+             else if(Sensors()==1)
+             {
+                Off(OUT_BC);
+                OnFwd(OUT_B,100);
+                OnRev(OUT_C,100);
+             }
+       }  while((CurrentTick()-t0) < 6000 && SensCheck()==1)
+       t0=CurrentTick();
+       Sensors();
+
+     }
+
+}
+
+void Attack ()
+{
+int cont = 1;
+while(cont){;
+     long t0, time;
+     do{
+        Off(OUT_BC);
+        OnFwd(OUT_BC,100);
+     }while(SensCheck()==4);
+     t0 = CurrentTick();
+     time=t0;
+     do{
+        if((time= CurrentTick()-t0) < 1000 && SensCheck()==1){
+               Off(OUT_BC);
+               OnFwd(OUT_B,100);
+               OnRev(OUT_C,100);
+               }
+        else if((time= CurrentTick()-t0) < 3000 && SensCheck()==1){
+               Off(OUT_BC);
+               OnFwd(OUT_C,100);
+               OnRev(OUT_B,100);
+               }
+     }while((time= CurrentTick()-t0) < 3000 && SensCheck()==1)
+     cont =0;
+}
+}
+
+int Sensors()
+{
+   SetSensorLowspeed(S4);  //port 4
+   SetSensorColorFull(S3);
+   if(Sensor(S3)==INPUT_BLACKCOLOR)
+   {
+   TapeDodge();
+   }
+   else if(SensorUS(S4)!=255)
+   {
+   Attack();
+   }
+   else
+   {
+   return 1;
+   }
+   return 0;
+}
+int SensCheck()
+{
+   SetSensorLowspeed(S4);  //port 4
+   SetSensorColorFull(S3);
+   if(Sensor(S3)==INPUT_BLACKCOLOR)
+   {
+   return 3;
+   }
+   else if(SensorUS(S4)!=255)
+   {
+   return 4;
+   }
+   else
+   {
+   return 1;
+   }
+   return 0;
+}
+
+void TapeDodge()
+{
+    long t0 = CurrentTick();
+    Off(OUT_BC);
+       do
+       {
+         /*OnFwd(OUT_B,100);*/
+         if((CurrentTick()-t0)<1000){
+         OnRev(OUT_BC,100);
+         PlayTone(500,1);
+         }
+         else
+         {
+         OnFwd(OUT_B,100);
+         OnRev(OUT_C,100);
+         }
+       } while((CurrentTick()-t0)<2000)
+}
+
