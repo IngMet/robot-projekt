@@ -1,0 +1,137 @@
+
+mutex moveMutex;
+task Attack();
+task TapeDodge();
+task Patrol();
+task Search();
+task TouchRight();
+task TouchLeft();
+
+
+int Run1=1, Run2=0;
+
+
+task main()
+{
+     SetSensorLowspeed(S4);
+     SetSensorColorFull(S3);
+     SetSensorTouch(S2);
+     SetSensorTouch(S1);
+     Precedes(TapeDodge,TouchLeft,TouchRight,Attack,Patrol,Search);
+}
+
+task Patrol()
+{
+while(true)
+{
+   Yield();
+   if(SensorUS(S4)==255 && Run1==1 && Sensor(S3)!=INPUT_BLACKCOLOR)
+   {
+     TextOut(0,LCD_LINE1,NumToStr(SensorUS(S4)));
+     //Acquire(moveMutex);
+     OnFwd(OUT_BC,100);
+     //Release(moveMutex);
+     Wait(3000);
+     Run1=0;
+     Run2=1;
+   }
+}
+}
+
+task Search()
+{
+while(true)
+{
+  Yield();
+  if(SensorUS(S4)==255 && Run2==1 && Sensor(S3)!=INPUT_BLACKCOLOR)
+   {
+     TextOut(0,LCD_LINE1,NumToStr(SensorUS(S4)));
+     //Acquire(moveMutex);
+     OnFwd(OUT_B,100);
+     OnRev(OUT_C,100);
+     Wait(1000);
+     //Release(moveMutex);
+     Off(OUT_BC);
+     //Acquire(moveMutex);
+     OnFwd(OUT_C,100);
+     OnRev(OUT_B,100);
+     Wait(2000);
+     //Release(moveMutex);
+     Run1=1;
+     Run2=0;
+   }
+}
+}
+
+task Attack ()
+{
+  while(true)
+  {
+   if (SensorUS(S4)!=255 && Sensor(S3)!=INPUT_BLACKCOLOR)
+   {
+      Run1=0; Run2=0;
+      Acquire(moveMutex);
+      OnFwd(OUT_BC,100);
+      Release(moveMutex);
+      Run2=1;
+   }
+  }
+}
+
+task TapeDodge()
+{
+while(true)
+{
+if (Sensor(S3)==INPUT_BLACKCOLOR)
+{
+         Run1=0; Run2=0;
+         PlayTone(400,500);
+         Acquire(moveMutex);
+         OnRev(OUT_BC,100);
+         Wait(2000);
+         Release(moveMutex);
+         Run2=1;
+}
+}
+}
+
+task TouchRight()
+{
+ while(true)
+ {
+  if(Sensor(S2)==1)
+  {
+    Run1=0; Run2=0;
+    PlayTone(450,2000);
+    Acquire(moveMutex);
+    OnFwd(OUT_C,100);
+    OnRev(OUT_B,100);
+    Wait(1000);
+    OnRev(OUT_BC,100);
+    Wait(1000);
+    Release(moveMutex);
+    Run2=1;
+  }
+ }
+}
+task TouchLeft()
+{
+ while(true)
+ {
+  if(Sensor(S1)==1)
+  {
+    Run1=0; Run2=0;
+    PlayTone(350,2000);
+    Acquire(moveMutex);
+    OnFwd(OUT_B,100);
+    OnRev(OUT_C,100);
+    Wait(1000);
+    OnRev(OUT_BC,100);
+    Wait(1000);
+    Release(moveMutex);
+    Run2=1;
+  }
+ }
+}
+
+
